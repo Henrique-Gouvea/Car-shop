@@ -1,3 +1,3 @@
-import * as schemas from '../schemas/schemaCar';
+import * as schemas from '../schemas/schemaVehicle';
 
-export type ICar = schemas.ICar;
+export type IVehicle = schemas.IVehicle;
