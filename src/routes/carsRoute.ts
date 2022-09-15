@@ -1,11 +1,11 @@
 import { Router, Request, Response } from 'express';
 import CarsController from '../controllers/carsController';
-import carModel from '../models/carsModel';
+import CarModel from '../models/carsModel';
 import CarsService from '../services/carsService';
 
 const routeCar = Router();
 
-const cars = new carModel();
+const cars = new CarModel();
 const carService = new CarsService(cars);
 const carsController = new CarsController(carService);
 
