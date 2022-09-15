@@ -1,6 +1,6 @@
 import { model as mongooseCreateModel, Schema } from 'mongoose';
 import { ICar } from '../interfaces/ICar';
-import MongoModel from './MongoModel';
+import MongoModel from './mongoModel';
 
 const carsMongooseSchema = new Schema<ICar>({
   model: String,
