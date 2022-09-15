@@ -1,13 +1,13 @@
 import { Router, Request, Response } from 'express';
-import carController from '../controllers/carsController';
+import CarsController from '../controllers/carsController';
 import carModel from '../models/carsModel';
-import carService from '../services/carsService';
+import CarsService from '../services/carsService';
 
 const routeCar = Router();
 
 const cars = new carModel();
-const carsService = new carService(cars);
-const carsController = new carController(carsService);
+const carService = new CarsService(cars);
+const carsController = new CarsController(carService);
 
 routeCar.post('/', (req: Request, res: Response) =>
   carsController.create(req, res));

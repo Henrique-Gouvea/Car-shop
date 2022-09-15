@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { ICar } from '../interfaces/ICar';
 import { IModel } from '../interfaces/IModel';
 
-export default class FrameController {
+export default class CarsController {
   constructor(private _service: IModel<ICar>) { }
 
   public async create(req: Request & { body: ICar }, res: Response<ICar>) {
