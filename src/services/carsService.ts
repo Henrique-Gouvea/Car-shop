@@ -19,7 +19,7 @@ class CarsService implements IService<ICar> {
   }
 
   public async read():Promise<ICar[] | null> {
-    return null;
+    return this._cars.read();
   }
 
   public async readOne(_id:string):Promise<ICar | null> {
