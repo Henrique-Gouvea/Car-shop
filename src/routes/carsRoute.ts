@@ -15,4 +15,7 @@ routeCar.post('/cars', (req: Request, res: Response) =>
 routeCar.get('/cars', (req: Request, res: Response) =>
   carsController.read(req, res));
 
+routeCar.get('/cars/:id', (req: Request, res: Response) =>
+  carsController.readOne(req, res));
+
 export default routeCar;
