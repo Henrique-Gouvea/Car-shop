@@ -18,4 +18,7 @@ routeCar.get('/cars', (req: Request, res: Response) =>
 routeCar.get('/cars/:id', (req: Request, res: Response) =>
   carsController.readOne(req, res));
 
+routeCar.put('/cars/:id', (req: Request, res: Response) =>
+  carsController.update(req, res));
+
 export default routeCar;
