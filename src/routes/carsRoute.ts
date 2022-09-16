@@ -21,4 +21,7 @@ routeCar.get('/cars/:id', (req: Request, res: Response) =>
 routeCar.put('/cars/:id', (req: Request, res: Response) =>
   carsController.update(req, res));
 
+routeCar.delete('/cars/:id', (req: Request, res: Response) =>
+  carsController.delete(req, res));
+
 export default routeCar;
