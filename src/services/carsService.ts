@@ -2,6 +2,7 @@ import { IModel } from '../interfaces/IModel';
 import { ICar } from '../interfaces/ICar';
 import schemaCar from '../schemas/schemaCar';
 import { IService } from '../interfaces/IService';
+import { ErrorTypes } from '../helpers/errorsCatalog';
 
 class CarsService implements IService<ICar> {
   private _cars: IModel<ICar>;
@@ -23,7 +24,9 @@ class CarsService implements IService<ICar> {
   }
 
   public async readOne(_id:string):Promise<ICar | null> {
-    return null;
+    const car = await this._cars.readOne(_id);
+    if (!car) throw new Error(ErrorTypes.EntityNotFound);
+    return car;
   }
 
   public async update(_id: string, obj: ICar): Promise<ICar | null> {
